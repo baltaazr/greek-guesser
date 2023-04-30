@@ -67,8 +67,8 @@ function App() {
   const [name, setName] = useState<string>("");
   const [diff, setDiff] = useState<string>("");
 
-  // axios.defaults.baseURL = "http://localhost:4000/api/tree";
-  axios.defaults.baseURL = "https://greek-guesser.herokuapp.com/api/tree";
+  axios.defaults.baseURL = "http://localhost:4000/api/tree";
+  // axios.defaults.baseURL = "https://greek-guesser.herokuapp.com/api/tree";
 
   let mobile = false;
   if (window.innerHeight < 750) {
@@ -192,8 +192,13 @@ function App() {
 
   let content;
 
+  // Tree loading
+  if (tree.length === 0 || current.length === 0) {
+    content = <div>Loading...</div>;
+  }
+
   // Prompt difference if leaf node
-  if (diffPrompt && current[1].length === 0) {
+  else if (diffPrompt && current[1].length === 0) {
     content = (
       <Container mobile={mobile}>
         <h2>
@@ -205,6 +210,11 @@ function App() {
           value={diff}
           onChange={(event) => {
             setDiff(event.target.value);
+          }}
+          onKeyDown={async (event) => {
+            if (event.key === "Enter") {
+              await submitDiff();
+            }
           }}
         />
         <button onClick={submitDiff}>Submit</button>
@@ -223,6 +233,11 @@ function App() {
           onChange={(event) => {
             setName(event.target.value);
           }}
+          onKeyDown={async (event) => {
+            if (event.key === "Enter") {
+              await submitName();
+            }
+          }}
         />
         <button
           onClick={async () => {
@@ -233,11 +248,6 @@ function App() {
         </button>
       </Container>
     );
-  }
-
-  // Tree loading
-  else if (tree.length === 0 || current.length === 0) {
-    content = <div>Loading...</div>;
   }
 
   // Leaf, final answer
@@ -264,7 +274,7 @@ function App() {
     content = (
       <Container mobile={mobile}>
         <h2>
-          Is your {term} {current[0]}?
+          Is {name.length === 0 ? `your ${term}` : name} {current[0]}?
         </h2>
         <button
           onClick={async () => {
