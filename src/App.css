@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+/* html {
+  background: url("https://i0.wp.com/hyperallergic-newspack.s3.amazonaws.com/uploads/2018/10/Athens-Acropolis-HOME.jpg?fit=1000%2C618&quality=100&ssl=1")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(8px);
+} */
+
+@font-face {
+  font-family: GreekFont;
+  src: url(CapitalisTypOasis.ttf);
+}
+
+body,
+html,
+#root {
+  font-family: GreekFont;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: GreekFont;
+  font-size: 1.5rem;
+  background-color: white;
+  border: 2px solid black;
+  padding: 14px 28px;
+  cursor: pointer;
+}
+
+input {
+  font-family: GreekFont;
+  font-size: 1.5rem;
+  background-color: white;
+  border: 2px solid black;
+  padding: 14px 28px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:last-child {
+  margin-left: 10px;
+}
