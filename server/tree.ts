@@ -16,6 +16,7 @@ router.post("/", async (req: any, res: any) => {
       fs.writeFileSync("./server/data.json", JSON.stringify(mergedTree));
       console.log("Tree updated");
       console.log(mergedTree);
+      console.log(getLeafNodes(mergedTree));
       res.json({ success: true, tree: mergedTree });
     } else {
       res.json({ success: false, tree: tree });
@@ -49,7 +50,7 @@ const treeCompatible = (aTree, bTree) => {
     return true;
   }
 
-  if (aTree[0] !== bTree[0]) {
+  if (aTree[0].toLowerCase() !== bTree[0].toLowerCase()) {
     return false;
   }
 
@@ -72,6 +73,18 @@ const mergeTree = (aTree, bTree) => {
     mergeTree(aTree[1], bTree[1]),
     mergeTree(aTree[2], bTree[2]),
   ];
+};
+
+const getLeafNodes = (tree) => {
+  if (tree.length === 0) {
+    return [];
+  }
+
+  if (tree[1].length === 0 && tree[2].length === 0) {
+    return [tree[0]];
+  }
+
+  return [...getLeafNodes(tree[1]), ...getLeafNodes(tree[2])];
 };
 
 export default router;

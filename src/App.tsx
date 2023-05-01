@@ -194,7 +194,7 @@ function App() {
 
   // Tree loading
   if (tree.length === 0 || current.length === 0) {
-    content = <div>Loading...</div>;
+    content = <Container mobile={mobile}>Loading...</Container>;
   }
 
   // Prompt difference if leaf node
@@ -254,9 +254,9 @@ function App() {
   else if (current[1].length === 0) {
     content = (
       <Container mobile={mobile}>
-        <h2>
-          Is your {term} {current[0]}?
-        </h2>
+        <h2>The {term} you're thinking of is...</h2>
+        <h2>{current[0]}</h2>
+        <h2>Am I correct?</h2>
         <button
           onClick={async () => {
             await reset();

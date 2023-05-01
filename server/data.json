@@ -1,5 +1,13 @@
 [
   "prevelant during/after the peloponnesian war",
-  ["from athens", ["pericles", [], []], ["agesilaus", [], []]],
-  ["from athens", ["solon", [], []], ["lycurgus", [], []]]
+  [
+    "from Athens",
+    ["a philosopher", ["Socrates", [], []], ["Pericles", [], []]],
+    ["from Macedon", ["Alexander", [], []], ["Agesilaus", [], []]]
+  ],
+  [
+    "from Athens",
+    ["after Solon", ["Cleisthenes", [], []], ["Solon", [], []]],
+    ["a historian", ["Herodotus", [], []], ["Lycurgus", [], []]]
+  ]
 ]
