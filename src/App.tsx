@@ -45,11 +45,11 @@ const Container = styled.div`
 
 const Title = styled.div`
   position: absolute;
-  top: 17%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
+  width: 100%;
   padding: 20px;
   text-align: center;
 `;
