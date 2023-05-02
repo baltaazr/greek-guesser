@@ -2,12 +2,40 @@
   "prevelant during/after the peloponnesian war",
   [
     "from Athens",
-    ["a philosopher", ["Socrates", [], []], ["Pericles", [], []]],
-    ["from Macedon", ["Alexander", [], []], ["Agesilaus", [], []]]
+    [
+      "a philosopher",
+      ["a student of Socrates", ["Plato", [], []], ["Socrates", [], []]],
+      [
+        "alive during the Sicilian Expedition",
+        ["Alcibiades", [], []],
+        ["Pericles", [], []]
+      ]
+    ],
+    [
+      "from Macedon",
+      [
+        "the conqueror of the Persian empire",
+        ["Alexander", [], []],
+        ["Philip II", [], []]
+      ],
+      ["from Thebes", ["Epaminondas", [], []], ["Agesilaus", [], []]]
+    ]
   ],
   [
     "from Athens",
-    ["after Solon", ["Cleisthenes", [], []], ["Solon", [], []]],
-    ["a historian", ["Herodotus", [], []], ["Lycurgus", [], []]]
+    [
+      "after the Peisistratids",
+      [
+        "the introducer of ostracism",
+        ["Cleisthenes", [], []],
+        ["Ephialtes", [], []]
+      ],
+      ["a tyrant", ["Peisistratus", [], []], ["Solon", [], []]]
+    ],
+    [
+      "known for his writings",
+      ["a historian", ["Herodotus", [], []], ["Homer", [], []]],
+      ["real", ["Lycurgus", [], []], ["Achilles", [], []]]
+    ]
   ]
 ]
