@@ -15,8 +15,11 @@ router.post("/", async (req: any, res: any) => {
       const mergedTree = mergeTree(tree, newTree);
       fs.writeFileSync("./server/data.json", JSON.stringify(mergedTree));
       console.log("Tree updated");
-      console.log(mergedTree);
-      console.log(getLeafNodes(mergedTree));
+      const newNames = getLeafNodes(mergedTree);
+      const originalNames = new Set(getLeafNodes(tree));
+      const diffNames = newNames.filter((x) => !originalNames.has(x));
+      console.log("Total names: ", newNames, newNames.length);
+      console.log("New names: ", diffNames);
       res.json({ success: true, tree: mergedTree });
     } else {
       res.json({ success: false, tree: tree });
