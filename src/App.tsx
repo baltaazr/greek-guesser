@@ -67,8 +67,8 @@ function App() {
   const [name, setName] = useState<string>("");
   const [diff, setDiff] = useState<string>("");
 
-  axios.defaults.baseURL = "http://localhost:4000/api/tree";
-  // axios.defaults.baseURL = "https://greek-guesser.herokuapp.com/api/tree";
+  // axios.defaults.baseURL = "http://localhost:4000/api/tree";
+  axios.defaults.baseURL = "https://greek-guesser.herokuapp.com/api/tree";
 
   let mobile = false;
   if (window.innerHeight < 750) {
