@@ -1,0 +1,77 @@
+[
+  "prevelant during/after the peloponnesian war",
+  [
+    "from Athens",
+    [
+      "a philosopher",
+      [
+        "a student of Socrates",
+        ["A military leader", ["Xenophon", [], []], ["Plato", [], []]],
+        ["Socrates", [], []]
+      ],
+      [
+        "alive during the Sicilian Expedition",
+        [
+          "a historian",
+          ["Thucydides", [], []],
+          [
+            "A long haired cavalryman",
+            ["Mantitheus", [], []],
+            ["Alcibiades", [], []]
+          ]
+        ],
+        ["Pericles", [], []]
+      ]
+    ],
+    [
+      "from Macedon",
+      [
+        "the conqueror of the Persian empire",
+        ["Alexander", [], []],
+        ["Philip II", [], []]
+      ],
+      ["from Thebes", ["Epaminondas", [], []], ["Agesilaus", [], []]]
+    ]
+  ],
+  [
+    "from Athens",
+    [
+      "after the Peisistratids",
+      [
+        "the introducer of ostracism",
+        ["Cleisthenes", [], []],
+        ["Ephialtes", [], []]
+      ],
+      ["a tyrant", ["Peisistratus", [], []], ["Solon", [], []]]
+    ],
+    [
+      "known for his writings",
+      [
+        "a historian",
+        ["Herodotus", [], []],
+        ["Known for works and days", ["Hesiod ", [], []], ["Homer", [], []]]
+      ],
+      [
+        "known for his laws",
+        ["Lycurgus", [], []],
+        [
+          "a warrior",
+          [
+            "Trojan",
+            ["Hector", [], []],
+            [
+              "Persian",
+              ["Xerxes", [], []],
+              ["From Ithaca", ["Odysseus ", [], []], ["patroclus", [], []]]
+            ]
+          ],
+          [
+            "A WOMAN",
+            ["a prisoner", ["Briseis", [], []], ["Helen", [], []]],
+            ["A ruler", ["Priam", [], []], ["Achilles", [], []]]
+          ]
+        ]
+      ]
+    ]
+  ]
+]
